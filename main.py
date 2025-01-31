@@ -12,16 +12,16 @@ def is_resource_sufficient(order_ingredients):
 
 def process_coins():
     print("Por favor insira as moedas!")
-    total = int(input("Quantas moedas de 1 centavos deseja inserir?"))
-    total += int(input("Quantas moedas de 0.50 centavos deseja inserir?") * 0.5)
-    total += int(input("Quantas moedas de 0.25 centavos deseja inserir?") * 0.25)
-    total += int(input("Quantas moedas de 0.10 centavos deseja inserir?") * 0.10)
-    total += int(input("Quantas moedas de 0.05 centavos deseja inserir?") * 0.05)
+    total = float(input("Quantas moedas de 1 real deseja inserir? "))
+    total += float(input("Quantas moedas de 0.50 centavos deseja inserir? ")) * 0.5
+    total += float(input("Quantas moedas de 0.25 centavos deseja inserir? ")) * 0.25
+    total += float(input("Quantas moedas de 0.10 centavos deseja inserir? ")) * 0.10
+    total += float(input("Quantas moedas de 0.05 centavos deseja inserir? ")) * 0.05
     return total
 
 is_on = True
 while is_on:
-    choice = input("What do you like? (espresso/latte/capuccino): ")
+    choice = input("O que você prefere? (espresso/matte/capuccino): ")
     if choice == "off":
         is_on = False
     elif choice == "report":
