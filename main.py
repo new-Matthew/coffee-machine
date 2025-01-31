@@ -1,9 +1,6 @@
 from resources import menu
 from resources import resources as res
 
-
-
-
 profit = 0
 
 def is_resource_sufficient(order_ingredients):
@@ -12,6 +9,15 @@ def is_resource_sufficient(order_ingredients):
             print("Desculpe não há água suficiente!, escolha outro drink ou digite off para sair!")
             return False
     return True
+
+def process_coins():
+    print("Por favor insira as moedas!")
+    total = int(input("Quantas moedas de 1 centavos deseja inserir?"))
+    total += int(input("Quantas moedas de 0.50 centavos deseja inserir?") * 0.5)
+    total += int(input("Quantas moedas de 0.25 centavos deseja inserir?") * 0.25)
+    total += int(input("Quantas moedas de 0.10 centavos deseja inserir?") * 0.10)
+    total += int(input("Quantas moedas de 0.05 centavos deseja inserir?") * 0.05)
+    return total
 
 is_on = True
 while is_on:
@@ -26,8 +32,5 @@ while is_on:
     else:
         drink = menu[choice]
         is_resource_sufficient(drink["ingredients"])
-    
-
-
-    
-    # TODO Se existir recursos suficientes, p fazer o drink selecionado, então o programa deve fazer o user inserir moeda moedas: 1real, 50cent, 25 cent 10cent 5cent 1cent
+        payment = process_coins()
+        print(payment)
