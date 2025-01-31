@@ -19,6 +19,17 @@ def process_coins():
     total += float(input("Quantas moedas de 0.05 centavos deseja inserir? ")) * 0.05
     return total
 
+def is_transaction_successful(money_received, drink_cost):
+    if money_received >= drink_cost:
+        change = round(money_received - drink_cost, 2)
+        print(f"aqui está seu troco: R${change}. ")
+        global profit
+        profit += drink_cost
+        return True
+    else:
+        print("Desculpe você não tem dinheiro suficiente. Dinheiro reembolsado!")
+        return False
+
 is_on = True
 while is_on:
     choice = input("O que você prefere? (espresso/matte/capuccino): ")
@@ -33,4 +44,4 @@ while is_on:
         drink = menu[choice]
         is_resource_sufficient(drink["ingredients"])
         payment = process_coins()
-        print(payment)
+        is_transaction_successful(payment, drink["cost"] )
