@@ -7,7 +7,7 @@ menu = {
         "cost": 1.5
     },
     "matte": {
-        "ingredientes": {
+        "ingredients": {
             "water": 200,  
             "milk": 150,   
             "coffee": 24,
@@ -15,7 +15,7 @@ menu = {
         "cost": 2.5
     },
     "capuccino": {
-        "ingredientes": {
+        "ingredients": {
             "water": 250,  
             "milk": 100, 
             "coffee": 24,   
@@ -25,7 +25,7 @@ menu = {
 }
 
 resources = {
-    "water":"300",
-    "milk":"200",
-    "coffee":"100",
+    "water":300,
+    "milk":200,
+    "coffee":100,
 }
